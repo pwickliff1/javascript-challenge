@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="static/css/style.css">
 </head>
 
-<body>
+<body onload="loadTable()">
   <div class="wrapper">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
@@ -32,13 +32,13 @@
             <div class="panel panel-default">
               <div class="panel-heading">Filter Search</div>
               <div class="panel-body">
-                <form>
+                <form id="form">
                   <div class="form-group">
                     <ul class="list-group" id="filters">
                       <li class="filter list-group-item">
                         <label for="date">Enter a Date</label>
                         <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
-                      </li>
+											</li>
                     </ul>
                   </div>
                   <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
@@ -61,7 +61,7 @@
                   <th class="table-head">Comments</th>
                 </tr>
               </thead>
-              <tbody></tbody>
+              <tbody id="row"></tbody>
             </table>
           </div>
         </div>
